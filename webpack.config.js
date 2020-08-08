@@ -10,6 +10,7 @@ module.exports = {
     module: {
         rules: [
             {
+                /* style and css loader */
                 test: /\.css$/,
                 use: [
                     {
@@ -17,6 +18,19 @@ module.exports = {
                     },
                     {
                         loader: "css-loader"
+                    }
+                ]
+            },
+            /* babel loader */
+            {
+                test: /\.js$/,
+                exclude: "node_modules/",
+                use: [
+                    {
+                        loader: "babel-loader",
+                        options: {
+                            presets: ["@babel/preset-env"]
+                        }
                     }
                 ]
             }
