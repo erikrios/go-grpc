@@ -4,4 +4,6 @@ gen:
 clean:
 	rm -rf server/pb/
 
-server: go run server/main.go
+run: 
+	go run server/main.go
+
